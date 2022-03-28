@@ -110,13 +110,13 @@
 				<div class="four col">
 					<h5 class="mini-tit">Машинное обучение</h5>
 					<li>sklearn, NumPy, SciPy, Pandas</li>
-					<li>Keras (TensorFlow), PyTorch</li>
+					<li>Keras, PyTorch, AutoML (TPot)</li>
 					<li>xgboost, catboost, sktime, tsfresh</li>
 					<li>python, pep8</li>
 				</div>
 				<div class="four col">
 					<h5 class="mini-tit">MlOps</h5>
-					<li>Git</li>
+					<li>Git, GitFlow</li>
 					<li>MLFlow</li>
 					<li>AirFlow</li>
 					<li>DVC</li>
@@ -294,14 +294,15 @@
 				<details>
   					<summary>Жюри, эксперт и постановщик кейсов на хакатонах</summary>
 					<li>Цифровой прорыв (2020, 2021) - 4 кейса Росатома</li> 
-					<li>CASE-IN (2021)</li>
+					<li>CASE-IN (2020-2022)</li>
 					<li>AtomProfi (2021)</li>
+					<li>Всероссийский инженерный конкурс (ВИК) (2022)</li>
 				</details>
 			</div>
 			<hr>
 			<div class="row project">
 				<details>
-  					<summary>Автор 11 зарегистрированных программ для ЭВМ в области обработки промышленных данных (2019-2021)</summary>
+  					<summary>Автор 11 программ для ЭВМ в области обработки промышленных данных (2019-2021)</summary>
   					<li>2019616790 - Random Processes Analysis</li> 
   					<li>2019616808 - Nuclear AI</li> 
   					<li>2019617077 - Digital Data Transport</li> 
@@ -326,11 +327,11 @@
 			</div>
 			<hr>
 			<div class="row project">
-				<h6>Выпускник преакселераторов GenerationS, RUSSOL, ГПН, АСИ, ЦП и др. (2018-2020)</h6>
+				<h6>Выпускник акселераторов GenerationS, RUSSOL, ГПН, АСИ, ЦП и др. (2018-2020)</h6>
 			</div>
 			<hr>
 			<div class="row project">
-				<h6>Создание Open-source библиотек и датасетов (суммарно 150+ звезд)</h6>
+				<h6>Создание Open-source библиотек и датасетов (суммарно 160+ звезд)</h6>
 				<li><a target="blank" href="https://github.com/waico/SKAB">SKAB</a> - Skoltech Anomaly Benchmark, датасет для оценки задачи обнаружения аномалий во временных рядах</li> 
 				<li><a target="blank" href="https://rosatom.ru/journalist/news/rosenergoatom-predstavil-rezultaty-pilotnogo-proekta-po-sozdaniyu-sistemy-prediktivnoy-analitiki/">TSAD</a> - Time Series Anomaly detection, библиотека для прогнозирования и поиска аномалий во временных рядах</li> 
 				<li><a target="blank" href="https://github.com/YKatser/CPDE">CPDE</a> - change point detection ensembles, дополнение к библиотеке <i>ruptures</i></li>
@@ -409,59 +410,209 @@
 				<h4>Реализованные проекты</h4>
 			</div>
 			<div class="row wrapper">
-				<div class="six col content-l">
-					<p><strong>О проекте:</strong> Прогноз качества конечной продукции (плотность, прочность) по данным тех процесса и определение влияющих факторов</p>
-					<p><strong>Данные:</strong> около тысячи образцов и данные с датчиков, характеризующие процесс производства продукции</p>
-					<p><strong>Созданные артефакты:</strong> EDA, ноутбук с результатами проверки гипотез, отчетная презентация</p>
-					<p><strong>Результаты:</strong> гипотеза частично подтверждена (плотность и прочность на сжатие)</p>
-					<p><strong>Стэк:</strong> python3, pandas, sklearn, catboost, tsfresh, shap</p>
-					<p><strong>Роль:</strong> DS/PM</p>
-					<p><strong>Год:</strong> 2021</p>
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Сбор данных, разметка и создание публичного бенчмарка (SKAB - Skoltech Anomaly Benchmark) для обнаружения аномалий во временных рядах</h6>
+					<li><strong>Данные:</strong> временные ряды - технологические параметры работы оборудования</li>
+					<li><strong>Созданные артефакты:</strong> <a target="blank" href="https://github.com/waico/SKAB">репозиторий</a> с датасетами, ноутбуками с методами обнаружения аномалий (бейзлайны), научная статья</li>
+					<li><strong>Результаты:</strong> 130+ звезд на гитхабе, 7+ цитирований, выступление на OpenTalks.ai, научная статья</li>
+					<li><strong>Стэк:</strong> python3, sklearn, numpy, pandas, keras | tex, git, trello, jupyter</li>
+					<li><strong>Роль:</strong> DS/PM</li>
+					<li><strong>Год:</strong> 2020-2022</li>
 				</div>
-				<div class="six col img-l">
+				<div class="four col img-l">
+					<img class="job_logo" src="img/skab.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Создание модели мониторинга технического состояния электролизеров и обнаружения аномалий (анодное, катодное давление)</h6>
+					<li><strong>Данные:</strong> временные ряды - технологические параметры работы оборудования, журналы ТОиР</li>
+					<li><strong>Созданные артефакты:</strong> EDA, ноутбуки с результатами проверки гипотез, серриализованная модель, код для инференса пайплайна</li>
+					<li><strong>Результаты:</strong> F1=0.52, статья, <a target="blank" href="https://www.youtube.com/watch?v=PXqKoQlqwlo">доклад</a> на AI journey 2021, отчетная, проектная документация</li>
+					<li><strong>Стэк:</strong> python3, keras, sklearn, pandas, numpy | git, jira, jupyter, pycharm</li>
+					<li><strong>Роль:</strong> Team lead</li>
+					<li><strong>Год:</strong> 2020-2021</li>
+				</div>
+				<div class="four col img-l">
+					<img class="job_logo" src="img/shk.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Повышение качества вибродиагностики за счет выделения режимов работы по данным АСУ ТП</h6>
+					<li><strong>Данные:</strong> 1000+ временных рядов - технологические параметры работы оборудования</li>
+					<li><strong>Созданные артефакты:</strong> EDA, ноутбук с результатами проверки гипотез, проектная и отчетная документация</li>
+					<li><strong>Результаты:</strong> около 100 наборов данных, где снижение размера доверительного интервала было на 40% и более</li>
+					<li><strong>Стэк:</strong> python3, pandas, sklearn, reptures | git, trello, jupyter</li>
+					<li><strong>Роль:</strong> Team lead</li>
+					<li><strong>Год:</strong> 2021</li>
+				</div>
+				<div class="four col img-l">
+					<img class="job_logo" src="img/tmk.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Обнаружение аномалий и определение остаточного ресурса трансформаторов АЭС</h6>
+					<li><strong>Данные:</strong> временные ряды - сигналы датчиков газов в масле, данные об аномалиях и данные об остаточном ресурсе оборудования</li>
+					<li><strong>Созданные артефакты:</strong> EDA, ноутбук с результатами проверки гипотез, модели, вкеб-приложение, отчетная презентация</li>
+					<li><strong>Результаты:</strong> Anomaly detection: Weighted F1=0.97, RUL: RMSE=27 дней, научные статьи (tba), <a target="blank" href="https://medium.com/product-ai/anomaly-detection-and-rul-determining-in-npp-power-transformers-b0d998a915">статья</a> на медиум</li>
+					<li><strong>Стэк:</strong> python3, pandas, sklearn, catboost, keras, tsfresh, shap | git, trello, jupyter, streamlit</li>
+					<li><strong>Роль:</strong> Team lead</li>
+					<li><strong>Год:</strong> 2021</li>
+				</div>
+				<div class="four col img-l">
+					<img class="job_logo" src="img/transformer.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Создание модели корректировки значений для повышения точности показаний датчиков на производстве</h6>
+					<li><strong>Данные:</strong> данные АСУ ТП, данные лаборатории</li>
+					<li><strong>Созданные артефакты:</strong> EDA, ноутбук с результатами проверки гипотез, отчетная презентация</li>
+					<li><strong>Результаты:</strong> снижение ошибки между данными АСУ ТП и данными лаборатории на 40% до удовлетворительного уровня</li>
+					<li><strong>Стэк:</strong> python3, pandas, sklearn, catboost, tsfresh, shap | git, trello, jupyter</li>
+					<li><strong>Роль:</strong> Team lead</li>
+					<li><strong>Год:</strong> 2021</li>
+				</div>
+				<div class="four col img-l">
+					<img class="job_logo" src="img/sensors.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Прогноз качества конечной продукции (плотность, прочность на сжатие/разрыв) по данным тех процесса и определение влияющих факторов</h6>
+					<li><strong>Данные:</strong> около тысячи образцов: данные по качеству из лаборатории и временные ряды - сигналы с контроллеров и датчиков, характеризующие процесс производства продукции</li>
+					<li><strong>Созданные артефакты:</strong> EDA, ноутбук с результатами проверки гипотез, отчетная презентация</li>
+					<li><strong>Результаты:</strong> гипотеза частично подтверждена (плотность и прочность на сжатие)</li>
+					<li><strong>Стэк:</strong> python3, pandas, sklearn, catboost, tsfresh, shap | git, trello, jupyter</li>
+					<li><strong>Роль:</strong> DS/PM</li>
+					<li><strong>Год:</strong> 2021</li>
+				</div>
+				<div class="four col img-l">
 					<img class="job_logo" src="img/products.png">
 				</div>
 			</div>
 			<hr>
 			<div class="row wrapper">
-				<div class="six col content-l">
-					<p><strong>О проекте:</strong> Диагностика нефтяных трубопроводов с помощью машинного обучения (детекция и локализация дефекта, определение толщины стенки трубопровода)</p>
-					<p><strong>Данные:</strong> магнитограммы с внутритрубных дефектоскопов</p>
-					<p><strong>Созданные артефакты:</strong> EDA, код для автоматизированной разметки, preprocessing pipeline, регрессионная модель определения толщины стенки, серриализованная CNN для классификации участка трубопровода и класс для инференса в приложении</p>
-					<p><strong>Результаты:</strong> 95% точность обнаружения дефектов на сбалансированной выборке, модель интегрирована в систему диагностики труб, MAPE=5% для модели обнаружения толщины стенки</p>
-					<p><strong>Стэк:</strong> Python3, pandas, xgboost, numpy, scipy, sklearn, PyTorch</p>
-					<p><strong>Роль:</strong> разработчик/DS/PM</p>
-					<p><strong>Год:</strong> 2018-2019</p>
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Предиктивная аналитика на МСЗ: Разработка алгоритмов поиска аномалий в работе оборудования для процесса получения ядерного топлива</h6>
+					<li><strong>Данные:</strong> временные ряды - технологические параметры работы оборудования, журналы ТОиР</li>
+					<li><strong>Созданные артефакты:</strong> EDA, ноутбуки с результатами проверки гипотез, серриализованная модель процесса на основе LSTM-based NN, код для инференса пайплайна</li>
+					<li><strong>Результаты:</strong> прототип системы предиктивной аналитики с алгоритмами обнаружения аномалий для различных типов оборудования, <a target="blank" href="https://medium.com/product-ai/fault-detection-and-rul-determining-for-granulation-machines-36c3111d655b">статья</a>, научный доклад (tba), <a target="blank" href="https://youtu.be/dYp0ik05roI">доклад</a> на AI journey 2020, отчетная, проектная документация</li>
+					<li><strong>Стэк:</strong> python3, keras, sklearn, pandas, numpy | git, jira, MLFlow, jupyter, pycharm</li>
+					<li><strong>Роль:</strong> Team lead</li>
+					<li><strong>Год:</strong> 2020-2021</li>
 				</div>
-				<div class="six col img-l">
+				<div class="four col img-l">
+					<img class="job_logo" src="img/msz.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Разработка модели прогноза температуры металла на установке печь-ковш (УПК)</h6>
+					<li><strong>Данные:</strong> данные плавки, значения датчиков</li>
+					<li><strong>Созданные артефакты:</strong> EDA, ноутбук с результатами проверки гипотез, модель, веб-приложение, отчетная презентация</li>
+					<li><strong>Результаты:</strong> прогноз температуры (MAPE~5%, RMSE~8°C), значимые факторы</li>
+					<li><strong>Стэк:</strong> python3, pandas, sklearn, xgboost, tsfresh, shap | git, trello, jupyter, streamlit</li>
+					<li><strong>Роль:</strong> Team lead</li>
+					<li><strong>Год:</strong> 2020</li>
+				</div>
+				<div class="four col img-l">
+					<img class="job_logo" src="img/upk.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Разработка и исследование ансамблирования методов offline changepoint detection, доработка библиотеки <i>ruptures</i></h6>
+					<li><strong>Данные:</strong> SKAB (Skoltech Anomaly Benchmark), TEP (Tennessee Eastman process)</li>
+					<li><strong>Созданные артефакты:</strong> <a target="blank" href="https://github.com/YKatser/CPDE">репозиторий</a> с .py модулями и ноутбуками с экспериментами, <a target="blank" href="https://www.mdpi.com/2076-3417/11/9/4280">научная статья</a>, документация</li>
+					<li><strong>Стэк:</strong> python3, pandas, sklearn, numpy, ruptures, scipy | tex, git, trello, jupyter, pycharm</li>
+					<li><strong>Роль:</strong> разработчик/DS</li>
+					<li><strong>Год:</strong> 2020</li>
+				</div>
+				<div class="four col img-l">
+					<img class="job_logo" src="img/cpde.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Определение остаточного ресурса гильз кристаллизатора МНЛЗ и выявление влияющих факторов</h6>
+					<li><strong>Данные:</strong> данные плавки, технологические параметры установки, оценка остаточного ресурса гильз</li>
+					<li><strong>Созданные артефакты:</strong> EDA, ноутбук с результатами проверки гипотез, модель, веб-приложение, отчетная презентация</li>
+					<li><strong>Результаты:</strong> оценка количества плавок до замены гильзы, значимые факторы, <a target="blank" href="https://medium.com/product-ai/rul-determining-for-continuous-casting-machine-mold-sleeve-98b7aeb1a17d">статья</a> на медиум, потенциальный экономический эффект $500k/год</li>
+					<li><strong>Стэк:</strong> python3, pandas, sklearn, xgboost, tsfresh, shap | git, trello, jupyter, streamlit</li>
+					<li><strong>Роль:</strong> Team lead</li>
+					<li><strong>Год:</strong> 2020</li>
+				</div>
+				<div class="four col img-l">
+					<img class="job_logo" src="img/mnlz.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Создание алгоритма обнаружения аномалий турбогенераторов АЭС на основе ансамбля offline changepoint detection procedures и выход на коренные причины</h6>
+					<li><strong>Данные:</strong> теплотехнические, вибрационные, электрические параметры агрегатов (200+ сигналов)</li>
+					<li><strong>Созданные артефакты:</strong> EDA, preprocessing pipeline (очистка, генерация признаков на основе физики, отбор признаков, снижение размерностей), алгоритм обнаружения аномалий, алгоритм прогнозирования временных рядов на основе Holt-Winters.</li>
+					<li><strong>Результаты:</strong> победа в <a target="blank" href="https://rosatom.ru/journalist/news/rosenergoatom-predstavil-rezultaty-pilotnogo-proekta-po-sozdaniyu-sistemy-prediktivnoy-analitiki/">предпилотных исследованиях Росатома</a></li>
+					<li><strong>Стэк:</strong> Python3, sklearn, pandas, scipy, ruptures | git, trello, jupyter</li>
+					<li><strong>Роль:</strong> DS</li>
+					<li><strong>Год:</strong> 2019</li>
+				</div>
+				<div class="four col img-l">
+					<img class="job_logo" src="img/tg.png">
+				</div>
+			</div>
+			<hr>
+			<div class="row wrapper">
+				<div class="eight col content-l">
+					<h6 class="mini-tit">Диагностика нефтяных трубопроводов с помощью машинного обучения (детекция и локализация дефекта, определение толщины стенки трубопровода)</h6>
+					<li><strong>Данные:</strong> магнитограммы с внутритрубных дефектоскопов (48 датчиков)</li>
+					<li><strong>Созданные артефакты:</strong> EDA, код для автоматизированной разметки, preprocessing pipeline, регрессионная модель определения толщины стенки, серриализованная CNN для классификации участка трубопровода и класс для инференса в приложении</li>
+					<li><strong>Результаты:</strong> 95% точность обнаружения дефектов на сбалансированной выборке, модель интегрирована в систему диагностики труб, MAPE=5% для модели обнаружения толщины стенки, научная статья, получение и реализация гранта "Старт"</li>
+					<li><strong>Стэк:</strong> Python3, pandas, xgboost, numpy, scipy, sklearn, PyTorch | tex, git, trello, jupyter</li>
+					<li><strong>Роль:</strong> разработчик/DS/PM</li>
+					<li><strong>Год:</strong> 2018-2019</li>
+				</div>
+				<div class="four col img-l">
 					<img class="job_logo" src="img/pipeline.png">
 				</div>
 			</div>
 			<hr>
 			<div class="row wrapper">
-				<div class="six col content-l">
-					<p><strong>О проекте:</strong> Создание алгоритма обнаружения аномалий турбогенератора на основе ансамбля offline changepoint detection procedures и выход на коренные причины</p>
-					<p><strong>Данные:</strong> теплотехнические, вибрационные, электрические параметры агрегатов</p>
-					<p><strong>Созданные артефакты:</strong> EDA, preprocessing pipeline (очистка, генерация признаков на основе физики, отбор признаков, снижение размерностей), алгоритм обнаружения аномалий, алгоритм прогнозирования временных рядов на основе Holt-Winters.</p>
-					<p><strong>Результаты:</strong> Победа в предпилотных исследованиях КРЭА</p>
-					<p><strong>Стэк:</strong> Python3, sklearn, pandas, scipy, ruptures</p>
-					<p><strong>Роль:</strong> DS</p>
-					<p><strong>Год:</strong> 2019</p>
+				<div class="eight col content-l">
+					<h6 class="mini-tit">НИОКР по обзору и имплементации из научных статей алгоритмов обнаружения аномалий (Hotelling, Q-statistic, domain heuristics, Autoencoder, etc.) и прогнозирования временных рядов (ARIMA, Holt-Winters, LSTM-based NN, etc.) для наполнения системы предиктивной аналитики (СПА) и технической диагностики</h6>
+					<li><strong>Данные:</strong> временные ряды (данные оборудования АЭС)</li>
+					<li><strong>Созданные артефакты:</strong> .py модули, отчеты о НИОКР, документация по использованию библиотек, слайды</li>
+					<li><strong>Результаты:</strong> расширение функционала СПА, <a target="blank" href="https://nuclear-power-engineering.ru/article/2019/04/01/">научная статья</a>, получение и реализация гранта "Умник"</li>
+					<li><strong>Стэк:</strong> python3, pandas, sklearn, numpy, scipy, keras | tex, git, jupyter, pycharm</li>
+					<li><strong>Роль:</strong> разработчик/DS</li>
+					<li><strong>Год:</strong>2017-2018</li>
 				</div>
-				<div class="six col img-l">
-					<img class="job_logo" src="img/tg.png">
+				<div class="four col img-l">
+					<img class="job_logo" src="img/methods.png">
 				</div>
 			</div>
 			<!-- <div class="row wrapper">
-				<div class="six col content-l">
-					<p><strong>О проекте:</strong></p>
-					<p><strong>Данные:</strong></p>
-					<p><strong>Созданные артефакты:</strong></p>
-					<p><strong>Результаты:</strong></p>
-					<p><strong>Стэк:</strong></p>
-					<p><strong>Год:</strong></p>
+				<div class="eight col content-l">
+					<h6 class="mini-tit"></h6>
+					<li><strong>Данные:</strong></li>
+					<li><strong>Созданные артефакты:</strong></li>
+					<li><strong>Результаты:</strong></li>
+					<li><strong>Стэк:</strong></li>
+					<li><strong>Роль:</strong></li>
+					<li><strong>Год:</strong></li>
 				</div>
-				<div class="six col img-l">
+				<div class="four col img-l">
 					<img class="job_logo" src="img/TG.png">
 				</div>
 			</div> -->
