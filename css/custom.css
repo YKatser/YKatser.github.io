@@ -127,12 +127,19 @@ html, body {
 }
 
 .job_logo {
-	max-width: 95%;
+	max-width: 90%;
 	box-sizing: border-box;
+	text-align: left
+}
+
+.job_logo-2 {
+	max-width: 50%;
+	box-sizing: border-box;
+	text-align: left
 }
 
 .job_logo_au {
-	max-width: 60%;
+	max-width: 50%;
 	box-sizing: border-box;
     display: block;
     margin-left: auto;
