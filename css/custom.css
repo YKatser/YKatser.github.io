@@ -166,6 +166,63 @@ html, body {
 .project {padding-top: 20px;}
 .project-2 {padding-bottom: 25px;}
 
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px; /* Настройте по ширине страницы */
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.slide {
+    flex: 0 0 33.333%; /* Показывать 3 слайда */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scaleX(0.25); /* Сжатие стрелки по горизонтали */
+    background: none;
+    color: #333;
+    border: none;
+    font-size: 12rem; /* Высота стрелки */
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+    line-height: 1; /* Устраняет растяжение внутри кнопки */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.slider-btn:hover {
+    color: #007BFF; /* Цвет стрелки при наведении */
+    transform: translateY(-50%) scaleX(0.25) scale(1.1); /* Слегка увеличивает при наведении */
+}
+
+.slider-btn.prev {
+    left: -20px;
+}
+
+.slider-btn.next {
+    right: -20px;
+}
+
+
 
 /*MOBILE
 ...............................................................*/

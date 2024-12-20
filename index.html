@@ -572,32 +572,52 @@
 					<h4>Лонгриды</h4>
 				</div>
 			</div>
-			
-			<div class="row wrapper">
-				<div class="four col img">
-					<a target="blank" href="https://habr.com/ru/companies/rosatom/articles/687270/"><img class="job_logo" src="img/art1.png"></a>
+			<div class="slider-wrapper">
+				<div class="slider">
+					<div class="slide">
+						<a target="blank" href="https://habr.com/ru/companies/rosatom/articles/687270/">
+							<img class="job_logo" src="img/art4.png">
+							<p>Обзор метрик обнаружения аномалий</p>
+						</a>
+					</div>
+					<div class="slide">
+						<a target="blank" href="https://habr.com/ru/articles/743682/">
+							<img class="job_logo" src="img/art6.png">
+							<p>Решение задачи определения RUL трансформаторов с помощью ML на python</p>
+						</a>
+					</div>
+					<div class="slide">
+						<a target="blank" href="https://habr.com/ru/articles/717812/">
+							<img class="job_logo" src="img/art3.png">
+							<p>Все, что вы хотели знать о задаче определения RUL оборудования</p>
+						</a>
+					</div>
+					<div class="slide">
+						<a target="blank" href="https://habr.com/ru/companies/rosatom/articles/687152/">
+							<img class="job_logo" src="img/art2.png">
+							<p>Проблемы качества промышленных данных</p>
+						</a>
+					</div>
+					<div class="slide">
+						<a target="blank" href="https://habr.com/ru/companies/rosatom/articles/686864/">
+							<img class="job_logo" src="img/art5.png">
+							<p>Опыт проектов с ИИ в промышленности</p>
+						</a>
+					</div>
+					<div class="slide">
+						<a target="blank" href="https://vc.ru/u/1167333-yuriy-katser/688092-5-istorii-s-hakatonov">
+							<img class="job_logo" src="img/art1.png">
+							<p>5 историй с хакатонов</p>
+						</a>
+					</div>
+					<!-- Добавьте больше слайдов по необходимости -->
 				</div>
-				<div class="four col img">
-					<a target="blank" href="https://habr.com/ru/articles/717812/"><img class="job_logo" src="img/art2.png"></a>
-				</div>
-				<div class="four col img">
-					<a target="blank" href="https://habr.com/ru/companies/rosatom/articles/687152/"><img class="job_logo" src="img/art3.png"></a>
-				</div>
+				<button class="slider-btn prev">&#10094;</button>
+				<button class="slider-btn next">&#10095;</button>
 			</div>
-			<div class="row wrapper">
-				<div class="four col content-c">
-					Обзор метрик обнаружения аномалий (плюс много дополнительной информации)
-				</div>
-				<div class="four col content-c">
-					Все, что вы хотели знать о задаче определения остаточного ресурса оборудования
-				</div>
-				<div class="four col content-c">
-					Проблемы качества промышленных данных (временных рядов)
-				</div>
-			</div>
-			
 		</div>
 	</div>
+
  	<div class="page-2 mob">
 		<div class="container">
 			<div class="twelve col tit">
@@ -942,7 +962,42 @@
 				};
 			};
 		}
+		
 	</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			const slider = $('.slider');
+			const slideCount = $('.slide').length;
+			const visibleSlides = 3;
+			const slideWidth = slider.width() / visibleSlides;
+			let currentIndex = 0;
+		
+			// Устанавливаем ширину каждого слайда
+			$('.slide').css('flex', `0 0 ${100 / visibleSlides}%`);
+		
+			function moveSlider() {
+				const offset = -currentIndex * slideWidth;
+				slider.css('transform', `translateX(${offset}px)`);
+			}
+		
+			$('.slider-btn.next').click(function () {
+				if (currentIndex < slideCount - visibleSlides) {
+					currentIndex++;
+					moveSlider();
+				}
+			});
+		
+			$('.slider-btn.prev').click(function () {
+				if (currentIndex > 0) {
+					currentIndex--;
+					moveSlider();
+				}
+			});
+		});
+
+	</script>
+
 
 </body>
 </html>
